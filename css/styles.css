@@ -1,0 +1,413 @@
+.fondo-blanco {
+  background-color: white; }
+
+.fondo-negro {
+  background-color: black; }
+
+.fondo-rosa {
+  background-color: #ddbea9; }
+
+.fondo-gris {
+  background-color: #a5a58d; }
+
+.fondo-gris-oscuro {
+  background-color: darkgrey; }
+
+.color-black {
+  color: black; }
+
+.color-white {
+  color: white; }
+
+.color-grey {
+  color: grey; }
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; }
+
+body {
+  text-align: center; }
+  body header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 0px 10px;
+    border-radius: 10px; }
+    body header h1 {
+      width: 25%;
+      text-align: left;
+      margin-top: 3px;
+      padding: 0 0 0 10px;
+      text-transform: capitalize;
+      font-size: 2.3rem;
+      font-weight: bold; }
+      body header h1 a {
+        text-decoration: none; }
+      body header h1 a:hover {
+        color: white; }
+    body header nav {
+      width: 75%;
+      font-size: 1.2rem;
+      font-weight: normal; }
+      body header nav ul {
+        list-style-type: none;
+        margin-top: 13px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; }
+        body header nav ul li {
+          padding: 0 10px;
+          margin: 0 12px 0 12px;
+          letter-spacing: 3px;
+          border: 1px solid white;
+          border-radius: 50px; }
+          body header nav ul li a {
+            text-decoration: none; }
+          body header nav ul li a:hover {
+            transform: scale(1.2);
+            font-weight: bolder;
+            color: white; }
+  body main .slide {
+    margin: 5px; }
+  body main .carousel-inner img {
+    border-radius: 10px; }
+  body main .festeja {
+    margin: 50px auto; }
+    body main .festeja .festeja__info--titulo {
+      margin: 15px auto;
+      font-size: 1.9rem;
+      font-weight: normal; }
+    body main .festeja .festeja__info--parrafo {
+      line-height: 20px;
+      font-size: 1rem;
+      font-weight: normal;
+      width: 95%;
+      margin: 20px auto; }
+  body main .servicios {
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px 10px 0 10px;
+    margin: 0 auto 10px auto;
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    body main .servicios .servicios__info- {
+      width: 30%;
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      line-height: 18px; }
+    body main .servicios .servicios__info--texto {
+      font-size: 1rem;
+      font-weight: lighter;
+      width: 100%;
+      padding: 5px 0 10px 0; }
+    body main .servicios .servicios__info--icono {
+      width: 100px; }
+  body main .experiencias {
+    width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 20px;
+    justify-self: right;
+    grid-template-columns: 15% 69% 15%;
+    grid-template-areas: "h2 h2 h2" "img-renata exp-renata ." ". exp-lucia img-lucia" "img-fausto exp-fausto ."; }
+    body main .experiencias #h2 {
+      grid-area: h2; }
+    body main .experiencias #img-renata {
+      grid-area: img-renata; }
+    body main .experiencias #exp-renata {
+      grid-area: exp-renata;
+      text-align: left; }
+    body main .experiencias #exp-lucia {
+      grid-area: exp-lucia;
+      text-align: right; }
+    body main .experiencias #img-lucia {
+      grid-area: img-lucia; }
+    body main .experiencias #exp-fausto {
+      grid-area: exp-fausto;
+      text-align: left; }
+    body main .experiencias #img-fausto {
+      grid-area: img-fausto; }
+    body main .experiencias .experiencias__info--titulo {
+      margin: 20px auto;
+      font-size: 1.9rem;
+      margin-bottom: 10px; }
+    body main .experiencias .experiencias__info--img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      align-self: center;
+      justify-self: center; }
+    body main .experiencias .experiencias__info {
+      line-height: 18px;
+      font-style: italic;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid black; }
+      body main .experiencias .experiencias__info .experiencias__info--clientes {
+        font-size: 1.2rem;
+        font-weight: bold; }
+      body main .experiencias .experiencias__info .experiencias__info--ubicacion {
+        line-height: 10px;
+        font-size: 1rem;
+        font-weight: bold; }
+      body main .experiencias .experiencias__info .experiencias__info--parrafo {
+        line-height: 18px;
+        font-style: italic; }
+  body main .h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bold; }
+  body main #nosotros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    width: 95%;
+    margin-bottom: 40px; }
+  body main .nosotros__info {
+    width: 40%;
+    padding-top: 30px;
+    line-height: 30px; }
+  body main #nosotros__img {
+    width: 45%;
+    border-radius: 30px; }
+  body main .barra {
+    background-color: gray;
+    height: 2px;
+    width: 70%;
+    margin: 30px auto 40px auto;
+    border-radius: 50vh; }
+  body main #eventos {
+    margin: 30px auto;
+    width: 95%; }
+    body main #eventos .eventos__info--h2 {
+      font-size: 2rem;
+      font-weight: bold; }
+    body main #eventos .eventos__sociales--h3, body main #eventos .eventos__corporativos--h3 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      font-weight: bold; }
+    body main #eventos .eventos__info--p {
+      font-size: 1rem; }
+    body main #eventos .collage {
+      display: grid;
+      column-gap: 15px;
+      row-gap: 15px;
+      justify-self: center;
+      margin: 20px 30px;
+      grid-template-columns: repeat(3, 1fr); }
+    body main #eventos .collage img {
+      width: 100%;
+      border-radius: 10px; }
+  body main .servicios__info {
+    width: 90%;
+    margin: 15px auto;
+    margin-bottom: 30px; }
+  body main .servicios__info--principales {
+    width: 80%;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 15px;
+    justify-self: center;
+    margin: 20px auto;
+    grid-template-columns: repeat(3, 1fr); }
+  body main .servicios__info--3 {
+    width: 70%;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 15px;
+    justify-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center; }
+  body main .servicios__info--2 {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 15px;
+    justify-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center; }
+  body main .servicios__info--principales img, body main .servicios__info--3 img, body main .servicios__info--2 div img {
+    width: 40%; }
+  body main .contacto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 30px auto; }
+    body main .contacto .contacto__info {
+      width: 40%;
+      margin-right: 50px; }
+      body main .contacto .contacto__info .contacto__info--p {
+        margin-bottom: 30px;
+        line-height: 20px; }
+    body main .contacto .contacto__formulario {
+      border: 1px solid #ddbea9;
+      width: 50%;
+      border-radius: 30px;
+      padding: 10px 10px; }
+    body main .contacto .formulario {
+      border: 1px solid gray;
+      border-radius: 20px;
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%; }
+    body main .contacto .botones {
+      width: 35%;
+      margin: 5px 30px;
+      color: white;
+      background-color: #ddbea9;
+      border: 1px solid white; }
+  body footer {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    body footer #footer__info {
+      width: 55%;
+      font-size: 1rem;
+      font-weight: normal;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center; }
+      body footer #footer__info .footer__info--contacto {
+        width: 50%; }
+      body footer #footer__info .footer__info--h2 {
+        margin: 15px auto;
+        font-size: 1.3rem;
+        font-weight: bold; }
+      body footer #footer__info .footer__info--h3 {
+        font-size: 1.1rem;
+        font-weight: normal; }
+    body footer #footer_info--redes {
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center; }
+    body footer #footer__info--redes-sociales {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center; }
+    body footer .footer__info--img {
+      width: 30px;
+      margin: 5px 15px; }
+    body footer .footer__info--img:hover {
+      transform: scale(1.4); }
+    body footer iframe {
+      width: 40%;
+      height: 300px;
+      border-radius: 10px; }
+
+@media only screen and (max-width: 1023px) {
+  body header {
+    flex-direction: column; }
+    body header h1 {
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 0px; }
+    body header nav {
+      width: 100%;
+      margin: 0px;
+      padding: 0px; }
+      body header nav ul li {
+        margin-bottom: 6px; }
+  body main .servicios {
+    width: 90%;
+    flex-direction: row; }
+    body main .servicios .servicios__info- {
+      width: 30%;
+      padding: 10px; }
+  body footer iframe {
+    width: 50%; }
+  body footer #footer__info {
+    width: 45%; } }
+
+@media only screen and (max-width: 768px) {
+  body main .festeja {
+    margin: 20px auto; }
+    body main .festeja .festeja__info--titulo {
+      font-size: 1.7rem;
+      margin: 15px auto; }
+    body main .festeja .festeja__info--parrafo {
+      font-size: 0.9rem;
+      width: 95%;
+      line-height: 20px;
+      margin: 10px auto; }
+  body main .servicios {
+    flex-direction: column;
+    width: 80%; }
+    body main .servicios .servicios__info- {
+      width: 100%;
+      margin: auto;
+      padding: 0px 30px; }
+    body main .servicios .servicios__info--icono {
+      width: 60px; }
+    body main .servicios .servicios__info--texto {
+      font-size: 0.9rem;
+      margin: auto; }
+  body main .experiencias {
+    margin: 10px auto 40px auto;
+    width: 90%;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: "h2 h2 h2" "img-renata exp-renata exp-renata" "exp-lucia exp-lucia img-lucia" "img-fausto exp-fausto exp-fausto"; }
+    body main .experiencias .experiencias__info--parrafo {
+      font-size: 0.9rem; }
+  body main #nosotros {
+    flex-direction: column; }
+    body main #nosotros .nosotros__info {
+      width: 90%;
+      padding-top: 0px;
+      line-height: 23px; }
+    body main #nosotros #nosotros__img {
+      width: 80%; }
+  body main #eventos .collage {
+    grid-template-columns: repeat(2, 1fr); }
+  body main .contacto {
+    flex-direction: column; }
+    body main .contacto .contacto__info {
+      width: 85%;
+      margin: auto; }
+    body main .contacto .contacto__formulario {
+      width: 90%; }
+  body footer {
+    flex-direction: column; }
+    body footer #footer__info--redes {
+      margin-bottom: 15px; }
+    body footer iframe {
+      width: 98%; } }

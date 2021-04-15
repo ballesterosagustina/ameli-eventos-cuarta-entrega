@@ -1,0 +1,473 @@
+$colores: (
+    blanco: white,
+    negro: black,
+    rosa: #ddbea9,
+    gris: #a5a58d,
+    gris-oscuro: darkgrey,
+);
+@each $color, $color-def in $colores {
+    .fondo-#{$color} {
+        background-color: $color-def;
+    }
+}
+@each $color-fuente in black, white, grey {
+    .color-#{$color-fuente} {
+        color: #{$color-fuente};
+    }
+}
+@mixin font-sizes ($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+@mixin display ($display, $f-direction, $f-wrap, $justify-content, $align-items) {
+    display: $display;
+    flex-direction: $f-direction;
+    flex-wrap: $f-wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin grid ($display-g, $c-gap, $r-gap, $j-self) {
+    display: $display-g;
+    column-gap: $c-gap;
+    row-gap: $r-gap;
+    justify-self: $j-self;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    header{
+        @include display(flex, row, wrap, center, center);
+        margin: 5px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        h1{
+            width: 25%;
+            text-align: left;
+            margin-top: 3px;
+            padding: 0 0 0 10px;
+            text-transform: capitalize;
+            @include font-sizes(2.3rem, bold);
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                color: white;
+            }
+        }
+        nav{
+            width: 75%;
+            @include font-sizes(1.2rem, normal);
+            ul{
+                list-style-type: none;
+                margin-top: 13px;
+                @include display(flex, row, wrap, center, center);
+                li{
+                    padding: 0 10px;
+                    margin: 0 12px 0 12px;
+                    letter-spacing: 3px;
+                    border: 1px solid white;
+                    border-radius: 50px;
+                    a{
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        transform: scale(1.2);
+                        font-weight: bolder;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .slide{
+            margin: 5px;
+        }
+        .carousel-inner img {
+            border-radius: 10px;
+        }
+        .festeja{
+            margin: 50px auto;
+            .festeja__info--titulo{
+                margin: 15px auto;
+                @include font-sizes(1.9rem, normal);
+            }
+            .festeja__info--parrafo{
+                line-height: 20px;
+                @include font-sizes(1rem, normal);
+                width: 95%;
+                margin: 20px auto;
+            }
+        }
+        .servicios{
+            width: 80%;
+            border-radius: 10px;
+            padding: 10px 10px 0 10px;
+            margin: 0 auto 10px auto;
+            align-content: space-between;
+            @include display(flex, row, wrap, center, center);
+            .servicios__info-{
+                width: 30%;
+                padding: 20px 20px;
+                @include display(flex, column, wrap, center, center);
+                line-height: 18px;
+            }
+            .servicios__info--texto{
+                @include font-sizes(1rem, lighter);
+                width: 100%;
+                padding: 5px 0 10px 0;
+            }
+            .servicios__info--icono{
+                width: 100px;
+            }
+        }
+        .experiencias {
+            width: 95%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            @include grid(grid, 10px, 20px, right);
+            grid-template-columns: 15% 69% 15%;
+            grid-template-areas: 
+            "h2 h2 h2"
+            "img-renata exp-renata ."
+            ". exp-lucia img-lucia"
+            "img-fausto exp-fausto .";
+            #h2{
+                grid-area: h2;
+            }
+            #img-renata{
+                grid-area: img-renata;
+            }
+            #exp-renata{
+                grid-area: exp-renata;
+                text-align: left;
+            }
+            #exp-lucia{
+                grid-area: exp-lucia;
+                text-align: right;
+            }
+            #img-lucia{
+                grid-area: img-lucia;
+            }
+            #exp-fausto{
+                grid-area: exp-fausto;
+                text-align: left;
+            }
+            #img-fausto{
+                grid-area: img-fausto;
+            }
+            .experiencias__info--titulo {
+                margin: 20px auto;
+                font-size: 1.9rem;
+                margin-bottom: 10px;
+            }
+            .experiencias__info--img {
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                align-self: center;
+                justify-self: center;
+            }
+            .experiencias__info{
+                line-height: 18px;
+                font-style: italic;
+                padding: 10px;
+                border-radius: 20px;
+                border: 1px solid black;
+                .experiencias__info--clientes{
+                    @include font-sizes(1.2rem, bold);
+                }
+                .experiencias__info--ubicacion {
+                    line-height: 10px;
+                    @include font-sizes(1rem, bold);
+                }
+                .experiencias__info--parrafo{
+                    line-height: 18px;
+                    font-style: italic;
+                }
+            }
+        }
+        .h2{
+            margin-top: 30px;
+            @include font-sizes(2rem, bold);
+        }
+        #nosotros{
+            @include display(flex, row, wrap, space-evenly, center);
+            margin: 10px;
+            width: 95%;
+            margin-bottom: 40px;
+        }
+        .nosotros__info{
+            width: 40%;
+            padding-top: 30px;
+            line-height: 30px;
+        }
+        #nosotros__img{
+            width: 45%;
+            border-radius: 30px;
+        }
+        .barra{
+            background-color: gray;
+            height: 2px;
+            width: 70%;
+            margin: 30px auto 40px auto;
+            border-radius: 50vh;
+        }
+        #eventos{
+            margin: 30px auto;
+            width: 95%;
+            .eventos__info--h2{
+                @include font-sizes(2rem, bold);
+            }
+            .eventos__sociales--h3, .eventos__corporativos--h3 {
+                margin-top: 30px;
+                @include font-sizes(1.5rem, bold);
+            }
+            .eventos__info--p{
+                font-size: 1rem;
+            }
+            .collage{
+                @include grid(grid, 15px, 15px, center);
+                margin: 20px 30px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .collage img{
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .servicios__info{
+            width: 90%;
+            margin: 15px auto;
+            margin-bottom: 30px;
+        }
+        .servicios__info--principales {
+            width: 80%;
+            @include grid(grid, 30px, 15px, center);
+            margin: 20px auto;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .servicios__info--3{
+            width: 70%;
+            @include grid(grid, 30px, 15px, center);
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0px auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .servicios__info--2{
+            @include grid(grid, 30px, 15px, center);
+            grid-template-columns: repeat(2, 1fr);
+            width: 50%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .servicios__info--principales img, .servicios__info--3 img, .servicios__info--2 div img{
+            width: 40%;
+        }
+        .contacto {
+            @include display(flex, row, wrap, center, center);
+            width: 95%;
+            margin: 30px auto;
+            .contacto__info {
+                width: 40%;
+                margin-right: 50px;
+                .contacto__info--p{
+                    margin-bottom: 30px;
+                    line-height: 20px;
+                }
+            }
+            .contacto__formulario{
+                border: 1px solid #ddbea9;
+                width: 50%;
+                border-radius: 30px;
+                padding: 10px 10px;
+            }
+            .formulario {
+                border: 1px solid gray;
+                border-radius: 20px;
+                padding: 10px;
+                margin: 10px 0;
+                width: 80%;
+            }
+            .botones{
+                width: 35%;
+                margin: 5px 30px;
+                color: white;
+                background-color: #ddbea9;
+                border: 1px solid white;
+            }
+        }
+    }
+    footer{
+        border-radius: 10px;
+        margin: 5px;
+        padding: 10px;
+        @include display(flex, row-reverse, wrap, space-between, center);
+        #footer__info{
+            width: 55%;
+            @include font-sizes(1rem, normal);
+            @include display(flex, row, wrap, space-around, center);
+            .footer__info--contacto{
+                width: 50%;
+            }
+            .footer__info--h2{
+                margin: 15px auto;
+                @include font-sizes(1.3rem, bold);
+            }
+            .footer__info--h3{
+                @include font-sizes(1.1rem, normal);
+            }
+        }
+        #footer_info--redes{
+            width: 49%;
+            @include display(flex, column, wrap, space-evenly, center);
+        }
+        #footer__info--redes-sociales{
+            @include display(flex, row, wrap, space-evenly, center);   
+        }
+        .footer__info--img{
+            width: 30px;
+            margin: 5px 15px;
+        }
+        .footer__info--img:hover{
+            transform: scale(1.4);
+        }
+        iframe {
+            width: 40%;
+            height: 300px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    body {
+        header {
+            flex-direction: column;
+            h1 {
+                width: 100%;
+                text-align: center;
+                margin-top: 5px;
+                margin-bottom: 0px;
+            }
+            nav {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                ul {
+                    li {
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+        }
+        main {
+            .servicios{
+                width: 90%;
+                flex-direction: row;
+                .servicios__info- {
+                    width: 30%;
+                    padding: 10px;
+                }
+            }
+        }
+        footer {
+            iframe {
+                width: 50%;
+            }
+            #footer__info { 
+                width: 45%;
+            }
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    body {
+        
+        main {
+            .festeja {
+                margin: 20px auto;
+                .festeja__info--titulo{
+                    font-size: 1.7rem;
+                    margin: 15px auto;
+                }
+                .festeja__info--parrafo{
+                    font-size: 0.9rem;
+                    width: 95%;
+                    line-height: 20px;
+                    margin: 10px auto;
+                }
+            }
+            .servicios{
+                flex-direction: column;
+                width: 80%;
+                .servicios__info- {
+                    width: 100%;
+                    margin: auto;
+                    padding: 0px 30px;
+                }
+                .servicios__info--icono{
+                    width: 60px;
+                }
+                .servicios__info--texto{
+                    font-size: 0.9rem;
+                    margin: auto;
+                }
+            }
+            .experiencias {
+                margin: 10px auto 40px auto;
+                width: 90%;
+                grid-template-columns: 30% 40% 30%;
+                grid-template-areas:
+                "h2 h2 h2"
+                "img-renata exp-renata exp-renata"
+                "exp-lucia exp-lucia img-lucia"
+                "img-fausto exp-fausto exp-fausto";
+                .experiencias__info--parrafo{
+                    font-size: 0.9rem;
+                }
+            }
+            #nosotros {
+                flex-direction: column;
+                .nosotros__info {
+                    width: 90%;
+                    padding-top: 0px;
+                    line-height: 23px;
+                }
+                #nosotros__img{
+                    width: 80%;
+                }
+            }
+            #eventos{
+                .collage {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .contacto {
+                flex-direction: column;
+                .contacto__info {
+                    width: 85%;
+                    margin: auto;
+                }
+                .contacto__formulario {
+                    width: 90%;
+                }
+            }
+        }
+        footer {
+            flex-direction: column;
+            #footer__info--redes{
+                margin-bottom: 15px;
+            }
+            iframe {
+                width: 98%;
+            }
+        }
+    }
+}
